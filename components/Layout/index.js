@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Normalize } from 'styled-normalize'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import ReactGA from 'react-ga-4'
+import ReactGA from 'react-ga4'
 
 export default function Layout({ children, pageTitle, description, ogImage, ...props }) {
   
