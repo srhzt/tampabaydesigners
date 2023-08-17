@@ -2,12 +2,12 @@ import Head from 'next/head'
 import { Normalize } from 'styled-normalize'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga-4'
 
 export default function Layout({ children, pageTitle, description, ogImage, ...props }) {
   
   if (typeof window !== "undefined") {
-    ReactGA.initialize('UA-157497184-1')
+    ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
