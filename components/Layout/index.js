@@ -8,7 +8,6 @@ export default function Layout({ children, pageTitle, description, ogImage, ...p
   
   if (typeof window !== "undefined") {
     ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
-    ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
   return (
