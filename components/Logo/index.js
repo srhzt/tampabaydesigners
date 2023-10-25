@@ -70,6 +70,9 @@ export const GroupLogo = ({ group }) => {
         break;
       case 'Sketch Tampa':
         return 'sketch-tampa.png'
+        break;      
+      case 'IxDA Tampa':
+        return 'ixda-tampa.png'
         break;
       default:
         return 'tbd.png'
