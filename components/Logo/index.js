@@ -74,9 +74,6 @@ export const GroupLogo = ({ group }) => {
       case 'IxDA Tampa':
         return 'ixda-tampa.png'
         break;
-      case 'AIGA Tampa Bay':
-        return 'aiga.png'
-        break;
       default:
         return 'tbd.png'
     }
