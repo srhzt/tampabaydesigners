@@ -111,9 +111,6 @@ const Header = ({ event }) => {
                         )
                       }
                     </div>
-                    <Attend
-                      event={event}
-                    />
                   </div>
                 )
                 :
