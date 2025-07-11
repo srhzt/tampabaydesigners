@@ -106,9 +106,6 @@ const Header = ({ event }) => {
                           </div>
                         )
                         :
-                        (
-                          <span className="opacity-50">Be the first to sign up for attendance!</span>
-                        )
                       }
                     </div>
                   </div>
