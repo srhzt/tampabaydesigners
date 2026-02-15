@@ -20,6 +20,10 @@ const Footer = () => {
     }, {
       name: 'About',
       link: '/about'
+    }, {
+      name: 'Generate Event Images',
+      link: 'https://tbd-image-gen.vercel.app',
+      external: true
     }
   ]
 
@@ -34,11 +38,17 @@ const Footer = () => {
                 key={i}
                 className="my-2"
               >
-                <Link href={item.link}>
-                  <a className="my-1 inline-flex transition text-black dark:text-white text-opacity-50 dark:text-opacity-50 hover:text-opacity-100 dark:hover:text-opacity-100 py-1 px-3 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-10 rounded-full mx-2">
+                {item.external ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="my-1 inline-flex transition text-black dark:text-white text-opacity-50 dark:text-opacity-50 hover:text-opacity-100 dark:hover:text-opacity-100 py-1 px-3 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-10 rounded-full mx-2">
                     { item.name }
                   </a>
-                </Link>
+                ) : (
+                  <Link href={item.link}>
+                    <a className="my-1 inline-flex transition text-black dark:text-white text-opacity-50 dark:text-opacity-50 hover:text-opacity-100 dark:hover:text-opacity-100 py-1 px-3 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-10 rounded-full mx-2">
+                      { item.name }
+                    </a>
+                  </Link>
+                )}
               </li>
             ))
           }

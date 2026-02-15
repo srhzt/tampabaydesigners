@@ -75,60 +75,6 @@ const Header = ({ event }) => {
           </motion.div>
         </div>
       </div>
-      <>
-        {
-          event.diff && event.diff >= 0 ? (
-            <>
-              {
-                event.link.includes('tampabay.design') ? (
-                  <div className={`container px-3 pb-8 mx-auto lg:w-1/2 grid grid-cols-1 xl:grid-cols-3 gap-y-6 lg:gap-x-6`}>
-                    <div className="col-span-2">
-                      {
-                        event.attending.length > 0 ? (
-                          <div className="flex w-full items-center">
-                            <span className="text-3xl">🎉</span>
-                            <div className="pl-2 flex-1 w-full mt-2 leading-relaxed">
-                              Join&nbsp;
-                              <strong>
-                                {
-                                  event.attending.slice(0, 3).join(', ')
-                                }
-                                {
-                                  event.attending.length >= 4 && (
-                                    <>
-                                      &nbsp;and {event.attending.length - 3} more
-                                    </>
-                                  )
-                                }
-                              </strong>
-                              &nbsp;at this event
-                            </div>
-                          </div>
-                        )
-                        :
-                        (
-                          <span className="opacity-50">Be the first to sign up for attendance!</span>
-                        )
-                      }
-                    </div>
-                    <Attend
-                      event={event}
-                    />
-                  </div>
-                )
-                :
-                (
-                  <div className={`container px-3 pb-8 mx-auto lg:w-1/2 grid grid-cols-1 gap-4`}>
-                    <a href={event.link} target="_blank" className="button my-0 button-primary">Attend</a>
-                  </div>
-                )
-              }
-            </>
-          )
-          :
-          null
-        }
-      </>
     </div>
   )
 }
